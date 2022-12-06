@@ -1,0 +1,18 @@
+<?php
+
+require_once 'model/auth.php';
+
+class coreController{
+
+    public function logout(){
+        $session_uid='';
+        $_SESSION['uid']=''; 
+        if(empty($session_uid) && empty($_SESSION['uid']))
+        {
+        $url=BASE_URL.'index.php';
+        header("Location: $url");
+        //echo "";
+        }
+    }
+
+}
